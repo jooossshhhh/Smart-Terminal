@@ -42,34 +42,16 @@ import mirror_webscraping
 
 w,t = mirror_webscraping.webscrape('Nashville')
 # wh = pyautogui.size()
-# print(wh.height)
-# def clickExitButton(window):
-#     window.destroy()
-# window = tk.Tk()
-# window.columnconfigure(0,minsize = 200)#wh.width)
-# window.rowconfigure([0,1],minsize=100)#wh.height-300)
-
-# label1 = tk.Label(text='A', bg="black", fg="white")
-# label1.grid(row = 0, column =0, sticky = 'nsew')
-# label2=tk.Label(text='B', bg="black", fg="white")
-# label2.grid(row=1,column=0,sticky='sw')
-# label1 = tk.Label(text='C', bg="black", fg="white")
-# label1.grid(row = 0, column =0, sticky = 'ne')
-# label2=tk.Label(text='D', bg="black", fg="white")
-# label2.grid(row=1,column=0,sticky='se')
-# # exitButton = tk.Button(text='exit',command = window.destroy())
-# # exitButton.place(x=0,y=0)
-# window.mainloop()
 
 # window = tk.Tk()
-
+#Show what key user just pressed on screen
 # def handle_keypress(event):
 #     """Print the character associated to the key pressed"""
 #     print(event.char)
 #     """print the typed character onto the gui"""
 #     label = tk.Label(text='%s'%(event.char))
 #     label.grid(row = 0,column = 0,sticky='n')
-    
+#Exit out of GUI   
 # def clickExitButton(event):
 #     print('yes')
 #     window.destroy()
@@ -100,16 +82,8 @@ for i in t:
 label1 = tk.Label(text=strin, bg="black", fg="green")
 label1.grid(row = 1, column =0, sticky = 'sw')
 
-
 #label1 = tk.Label(text = visual())
 #label2.grid(row = 1, column = 0)
-
-#retrieve text from label
-#text = label['text']
-#change text
-#label['text']='other stuff'
-#retrive new value
-#text2 = label['text']
 
 window.mainloop()
 
