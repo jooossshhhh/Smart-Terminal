@@ -8,12 +8,17 @@ Created on Wed Jun 22 12:04:44 2022
 from bs4 import BeautifulSoup
 import requests
 import re
+import geocoder
 
 def webscrape(city):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     
-    
+    g = geocoder.ip('me')
+    city = g.city
+    state = g.state
     #city='Nashville'
+    print('searching for weather in...%s'%(city))
+    city = city+' '+ state +' weather'
     print('searching for weather in...%s'%(city))
     city = city +' weather'
     city=city.replace(' ','+')
@@ -34,7 +39,7 @@ def webscrape(city):
         time = read.select('#wob_dts')[0].getText().strip()       
         info = read.select('#wob_dc')[0].getText().strip() 
         weather = read.select('#wob_tm')[0].getText().strip()
-        print(location, time, info, weather)
+        weather_info =[location, time, info, weather]
     
         counter = 0
         hyper_set=set([])
@@ -67,4 +72,4 @@ def webscrape(city):
         #         else:continue
     except: 
         print('invalid search')
-    return(location)
+    return(weather_info,title_set)
