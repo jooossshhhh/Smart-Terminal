@@ -65,12 +65,16 @@ import os
 #     #use mic to listen
 #     audio = r.listen(source)
 #use google api to transcipt audio to text
-    #google = r.recognize_google(audio)
-    #print(google)
+    try:
+        #google = r.recognize_google(audio)
+        #print(google)
+    except:
+        print("i didn't recognize that")
     # sphinx = r.recognize_sphinx(audio)
     # print(sphinx)
     #print('Google: [{}]\nSphinx: [{}]\n\n'.format(google,sphinx))
     # print(text)
+    #return text as lower instead of making it lower each time
     # if str(text).lower() == 'what time is it':
     #     now = datetime.datetime.now()
     #     print(now.strftime('%I:%M:%S'))
