@@ -34,7 +34,7 @@ def get_audio():
 
 WAKE = 'computer'
 print('Start')
-os.system('cmatrix')
+
 while True:
     print('Listening')
     text = get_audio()
