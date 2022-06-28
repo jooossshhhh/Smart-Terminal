@@ -16,9 +16,7 @@ def webscrape(city):
     g = geocoder.ip('me')
     city = g.city
     state = g.state
-    #city='Nashville'
-    print('searching for weather in...%s'%(city))
-    city = city+' '+ state +' weather'
+
     print('searching for weather in...%s'%(city))
     city = city +' weather'
     city=city.replace(' ','+')
